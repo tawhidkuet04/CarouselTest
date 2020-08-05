@@ -36,9 +36,9 @@ int zoomFactor = 0.3;
         if(CGRectIntersectsRect(attributes.frame, visibleRect)){
             float distance = visibleRect.size.width/2 - attributes.center.x;
             float normalizedDistance = distance / activeDistance;
-            if(fabs(distance) < activeDistance){
+            if(fabsf(distance) < activeDistance){
               NSLog(@"layoutAttributesForElementsInRect %f",fabs(normalizedDistance));
-                float zoom = 1 + zoomFactor * ( 1 - fabs(normalizedDistance));
+                float zoom = 1 + zoomFactor * ( 1 - fabsf(normalizedDistance));
                 attributes.transform3D = CATransform3DMakeScale(zoom, zoom, 1);
                 attributes.zIndex = (int)zoom;
             }
@@ -58,7 +58,7 @@ int zoomFactor = 0.3;
     
     for (UICollectionViewLayoutAttributes *layoutAttributes in rectAttributes ){
         float itemHorizontalCenter = layoutAttributes.center.x;
-        if (fabs((itemHorizontalCenter - horizontalCenter)) < fabs(offsetAdjustment)){
+        if (fabsf((itemHorizontalCenter - horizontalCenter)) < fabsf(offsetAdjustment)){
             offsetAdjustment = itemHorizontalCenter - horizontalCenter;
         }
     }
