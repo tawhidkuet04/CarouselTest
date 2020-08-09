@@ -16,10 +16,9 @@
 		4E002BFD24D17BB700ACE037 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E002BFC24D17BB700ACE037 /* main.m */; };
 		4E002C0724D17BB700ACE037 /* CarouselTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C0624D17BB700ACE037 /* CarouselTestTests.m */; };
 		4E002C1224D17BB700ACE037 /* CarouselTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C1124D17BB700ACE037 /* CarouselTestUITests.m */; };
-		4E002C2124D1830A00ACE037 /* ZoomAndSnapFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C2024D1830A00ACE037 /* ZoomAndSnapFlowLayout.m */; };
 		4E002C2524D2E72800ACE037 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E002C2324D2E72800ACE037 /* CollectionViewCell.m */; };
 		4E002C2624D2E72800ACE037 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E002C2424D2E72800ACE037 /* CollectionViewCell.xib */; };
-		4E25B70724DACBDA00102001 /* HJCarouselViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E25B70624DACBD900102001 /* HJCarouselViewLayout.m */; };
+		4E25B70A24DC3D8B00102001 /* SCAdCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E25B70824DC3D8B00102001 /* SCAdCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,13 +57,11 @@
 		4E002C0D24D17BB700ACE037 /* CarouselTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarouselTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E002C1124D17BB700ACE037 /* CarouselTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarouselTestUITests.m; sourceTree = "<group>"; };
 		4E002C1324D17BB700ACE037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E002C1F24D1830A00ACE037 /* ZoomAndSnapFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoomAndSnapFlowLayout.h; sourceTree = "<group>"; };
-		4E002C2024D1830A00ACE037 /* ZoomAndSnapFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomAndSnapFlowLayout.m; sourceTree = "<group>"; };
 		4E002C2224D2E72800ACE037 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		4E002C2324D2E72800ACE037 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		4E002C2424D2E72800ACE037 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
-		4E25B70524DACBD900102001 /* HJCarouselViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCarouselViewLayout.h; sourceTree = "<group>"; };
-		4E25B70624DACBD900102001 /* HJCarouselViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCarouselViewLayout.m; sourceTree = "<group>"; };
+		4E25B70824DC3D8B00102001 /* SCAdCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAdCollectionViewLayout.m; sourceTree = "<group>"; };
+		4E25B70924DC3D8B00102001 /* SCAdCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAdCollectionViewLayout.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,10 +118,8 @@
 				4E002BEE24D17BB100ACE037 /* SceneDelegate.m */,
 				4E002BF024D17BB100ACE037 /* ViewController.h */,
 				4E002BF124D17BB100ACE037 /* ViewController.m */,
-				4E002C1F24D1830A00ACE037 /* ZoomAndSnapFlowLayout.h */,
-				4E002C2024D1830A00ACE037 /* ZoomAndSnapFlowLayout.m */,
-				4E25B70524DACBD900102001 /* HJCarouselViewLayout.h */,
-				4E25B70624DACBD900102001 /* HJCarouselViewLayout.m */,
+				4E25B70924DC3D8B00102001 /* SCAdCollectionViewLayout.h */,
+				4E25B70824DC3D8B00102001 /* SCAdCollectionViewLayout.m */,
 				4E002C2224D2E72800ACE037 /* CollectionViewCell.h */,
 				4E002C2324D2E72800ACE037 /* CollectionViewCell.m */,
 				4E002C2424D2E72800ACE037 /* CollectionViewCell.xib */,
@@ -286,13 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E25B70724DACBDA00102001 /* HJCarouselViewLayout.m in Sources */,
 				4E002C2524D2E72800ACE037 /* CollectionViewCell.m in Sources */,
 				4E002BF224D17BB100ACE037 /* ViewController.m in Sources */,
 				4E002BEC24D17BB100ACE037 /* AppDelegate.m in Sources */,
 				4E002BFD24D17BB700ACE037 /* main.m in Sources */,
+				4E25B70A24DC3D8B00102001 /* SCAdCollectionViewLayout.m in Sources */,
 				4E002BEF24D17BB100ACE037 /* SceneDelegate.m in Sources */,
-				4E002C2124D1830A00ACE037 /* ZoomAndSnapFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

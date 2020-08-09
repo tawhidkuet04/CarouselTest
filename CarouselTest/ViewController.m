@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "ZoomAndSnapFlowLayout.h"
 #import "CollectionViewCell.h"
-#import "HJCarouselViewLayout.h"
-@interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+#import "SCAdCollectionViewLayout.h"
+
+@interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,SCCollectionViewFlowLayoutDelegate>
 
 @end
 
@@ -18,22 +18,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    HJCarouselViewLayout *flowLayout = [[HJCarouselViewLayout alloc] initWithAnim:HJCarouselAnimLinear];
-    flowLayout.visibleCount = 3;
-    flowLayout.itemSize = CGSizeMake(140, 250);
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds
-                                            collectionViewLayout:flowLayout];
+    SCAdCollectionViewLayout *layout = [[SCAdCollectionViewLayout alloc]init];
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    layout.itemSize = CGSizeMake(122, 217);
+    layout.minimumLineSpacing = 42.5;
+    layout.minimumInteritemSpacing = 0.0;
+    layout.secondaryItemMinAlpha = 1;
+    layout.threeDimensionalScale = 1.15;
+    layout.delegate = self ;
+    layout.cycleIndex = 1;
+    CGFloat x_inset =(self.view.frame.size.width-layout.itemSize.width) / 2.f;
+    layout.sectionInset = UIEdgeInsetsMake(0, x_inset, 0, x_inset);
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 120, UIScreen.mainScreen.bounds.size.width, 400)
+                                            collectionViewLayout:layout];
     self.collectionView.backgroundColor = UIColor.blueColor;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    self.collectionView.decelerationRate = 0 ;
     [self.collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CollectionViewCell"];
     [self.collectionView reloadData];
     [self.view addSubview:self.collectionView];
     
 }
-
+- (void)sc_collectioViewScrollToIndex:(NSInteger)index{
+    NSLog(@"index %ld",(long)index);
+}
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return  10;
 }
